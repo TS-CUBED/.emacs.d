@@ -99,10 +99,6 @@ Otherwise the startup will be very slow."
 
 (update-load-path)
 
-;; Requisites
-(require 'init-const)
-(require 'init-custom)
-(require 'init-funcs)
 
 ;; Packages
 ;; Without this comment Emacs25 adds (package-initialize) here
@@ -132,13 +128,18 @@ Otherwise the startup will be very slow."
 (require 'init-shell)
 
 (require 'init-markdown)
-(require 'init-org)
+(require 'init-quarto-ts)
+(require 'init-org-ts)
+(require 'init-denote-ts)
 (require 'init-reader)
 
 (require 'init-dict)
 (require 'init-docker)
 (require 'init-player)
 (require 'init-utils)
+
+;; Email
+(require 'init-mu-ts)
 
 ;; Programming
 (require 'init-vcs)
@@ -152,6 +153,7 @@ Otherwise the startup will be very slow."
 (require 'init-go)
 (require 'init-rust)
 (require 'init-python)
+(require 'init-julia-ts)
 (require 'init-ruby)
 (require 'init-elixir)
 (require 'init-web)
