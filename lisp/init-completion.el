@@ -102,7 +102,7 @@
          ("C-c c t" . consult-theme)
 
          ([remap Info-search]        . consult-info)
-         ([remap isearch-forward]    . consult-line)
+         ;; ([remap isearch-forward]    . consult-line)
          ([remap recentf-open-files] . consult-recent-file)
 
          ;; C-x bindings in `ctl-x-map'
