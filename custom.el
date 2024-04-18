@@ -138,6 +138,7 @@
  '(cua-mode nil)
  '(cua-normal-cursor-color "black")
  '(font-use-system-font t)
+ '(org-roam-file-exclude-regexp '("data/" ".*gtd.org-gtd" ".*cal.org"))
  '(org-safe-remote-resources
    '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
  '(safe-local-variable-values
