@@ -23,12 +23,12 @@
 ;;
 
 (use-package denote
-  :bind (("C-c n b" . my/denote-toggle-backlinks)
-         ("C-c n f" . denote-open-or-create)
-         ("C-c n g" . counsel-rg)
-         ("C-c n l" . denote-link-or-create)
-         ("C-c n n" . denote-create-note-using-type)
-         ("C-c n j" . my-denote-journal))
+  :bind (("C-c n d b" . my/denote-toggle-backlinks)
+         ("C-c n d f" . denote-open-or-create)
+         ("C-c n d g" . counsel-rg)
+         ("C-c n d l" . denote-link-or-create)
+         ("C-c n d n" . denote-create-note-using-type)
+         ("C-c n d j" . my-denote-journal))
   :config
   (setq denote-directory (expand-file-name "~/Documents/Denote"))
 
