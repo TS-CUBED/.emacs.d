@@ -367,6 +367,20 @@ prepended to the element after the #+HEADER: tag."
                      (org-agenda-overriding-header "All TODO items")))))))
   )
 
+
+(setq org-roam-file-extensions '("org" "md" "qmd")) ; enable Org-roam for a markdown extension
+(add-to-list 'load-path "/home/thor/software/md-roam") ; installation as above
+(require 'md-roam)
+(md-roam-mode 1) ; md-roam-mode must be active before org-roam-db-sync
+(setq md-roam-file-extension '("md" "qmd")) ; default "md". Specify an extension such as "markdown"
+
+(org-roam-db-autosync-mode 1) ; autosync-mode triggers db-sync. md-roam-mode must be already active
+(add-to-list 'org-roam-capture-templates
+             '("q" "quarto" plain "" :target (file+head "pages/%<%Y-%m-%dT%H%M%S>_${slug}.qmd" "\n---\ntitle: ${title}\nid: %<%Y-%m-%dT%H%M%S>\n---\n") :unnarrowed t))
+
+(add-to-list 'org-roam-capture-templates
+             '("m" "Markdown" plain "" :target (file+head "pages/%<%Y-%m-%dT%H%M%S>_${slug}.md" "\n---\ntitle: ${title}\nid: %<%Y-%m-%dT%H%M%S>\n---\n") :unnarrowed t))
+
 (provide 'init-org-ts)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
